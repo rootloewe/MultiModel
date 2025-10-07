@@ -1,0 +1,4 @@
+__main__ - 2025-10-07 13:44:55 - app.py - 63 - INFO - Anwendung MultiModel gestartet: 1.4.5
+basemodel - 2025-10-07 13:47:09 - basemodel.py - 28 - INFO - Model als Pickle erfolgreich gespeichert in ../models/randomForrest_v1.pkl
+basemodel - 2025-10-07 13:47:09 - basemodel.py - 33 - INFO - Model als joblib erfolgreich gespeichert in ../models/randomForrest_v1.jbl
+__main__ - 2025-10-07 13:47:10 - app.py - 65 - INFO - Anwendung MultiModel beendet: 1.4.5

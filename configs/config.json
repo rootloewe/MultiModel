@@ -1,0 +1,11 @@
+{
+    "app": {
+        "app_title": "MultiModel",
+        "app_version": "1.4.5"
+    },
+
+    "saving": {
+        "pkl": true,
+        "job": true
+        }
+}
