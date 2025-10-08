@@ -1,4 +1,16 @@
-__main__ - 2025-10-07 13:44:55 - app.py - 63 - INFO - Anwendung MultiModel gestartet: 1.4.5
-basemodel - 2025-10-07 13:47:09 - basemodel.py - 28 - INFO - Model als Pickle erfolgreich gespeichert in ../models/randomForrest_v1.pkl
-basemodel - 2025-10-07 13:47:09 - basemodel.py - 33 - INFO - Model als joblib erfolgreich gespeichert in ../models/randomForrest_v1.jbl
-__main__ - 2025-10-07 13:47:10 - app.py - 65 - INFO - Anwendung MultiModel beendet: 1.4.5
+root - 2025-10-08 16:58:09 - config.py - 22 - INFO - Config.json erfolgreich geladen.
+__main__ - 2025-10-08 16:58:10 - app.py - 50 - INFO - Anwendung MultiModel der Version 1.4.5 gestartet.
+dataset - 2025-10-08 16:58:12 - dataset.py - 81 - INFO - Model als Pickle erfolgreich gespeichert in ../models/Logistic_Regression_v1.pkl
+dataset - 2025-10-08 16:58:12 - dataset.py - 93 - INFO - Model als joblib erfolgreich gespeichert in ../models/Logistic_Regression_v1.jbl
+dataset - 2025-10-08 16:58:14 - dataset.py - 81 - INFO - Model als Pickle erfolgreich gespeichert in ../models/Random_Forest_v1.pkl
+dataset - 2025-10-08 16:58:15 - dataset.py - 93 - INFO - Model als joblib erfolgreich gespeichert in ../models/Random_Forest_v1.jbl
+dataset - 2025-10-08 16:58:15 - dataset.py - 81 - INFO - Model als Pickle erfolgreich gespeichert in ../models/K-Nearest_Neighbors_v1.pkl
+dataset - 2025-10-08 16:58:15 - dataset.py - 93 - INFO - Model als joblib erfolgreich gespeichert in ../models/K-Nearest_Neighbors_v1.jbl
+dataset - 2025-10-08 16:58:15 - dataset.py - 81 - INFO - Model als Pickle erfolgreich gespeichert in ../models/Decision_Tree_v1.pkl
+dataset - 2025-10-08 16:58:15 - dataset.py - 93 - INFO - Model als joblib erfolgreich gespeichert in ../models/Decision_Tree_v1.jbl
+root - 2025-10-08 16:58:15 - app.py - 39 - INFO - Bestes Modell: Logistic Regression
+root - 2025-10-08 16:58:15 - app.py - 40 - INFO - Beste Kreuzvalidierungs-Score: 0.9667
+root - 2025-10-08 16:58:15 - app.py - 41 - INFO - Beste Hyperparameter: {'classifier__C': 10.0, 'classifier__solver': 'lbfgs'}
+root - 2025-10-08 16:58:15 - app.py - 42 - INFO - Test Accuracy: 1.0000
+root - 2025-10-08 16:58:15 - dataset.py - 122 - INFO - Pickel erfolgreich von Logistic_Regression_v1.pkl geladen.
+__main__ - 2025-10-08 16:58:15 - app.py - 52 - INFO - Anwendung MultiModel der Version 1.4.5 beendet.
