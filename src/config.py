@@ -11,6 +11,7 @@ logging_pfad = Path("../configs") / "logging.ini"
 
 logging.config.fileConfig(logging_pfad)
 
+file = None
 try:
     file = open(config_path, mode = "r", encoding= "UTF-8")
     config = json.load(file)
@@ -20,7 +21,9 @@ except IOError as e:
     logging.error(f"Ein I/O Fehler ist aufgetreten: {e}")
 else:
     logging.info("Config.json erfolgreich geladen.")
-    file.close()
+finally:
+    if file is not None:
+        file.close()
 
 
 pkl: bool = config["saving"]["pkl"]

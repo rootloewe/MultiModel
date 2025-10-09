@@ -65,20 +65,23 @@ class Dataset:
             model (_string_): Modelname
             path (_string_): Dateiname
         """
+        file = None
         if cfg.pkl:
             pkl_path = Path("../models") / f"{path}.pkl"
             try:
-                file_pkl = open(pkl_path, mode = "wb") 
-                pickle.dump(model, file_pkl, protocol=pickle.HIGHEST_PROTOCOL)
+                file = open(pkl_path, mode = "wb") 
+                pickle.dump(model, file, protocol=pickle.HIGHEST_PROTOCOL)
             except (FileNotFoundError, PermissionError) as e:
                 logger.error(f"Fehler beim Speichern des Pickle-Modells: {e}")
             except pickle.PicklingError as e:
                 logger.error(f"Pickling Fehler: {e}")
             except Exception as e:
                 logger.exception(f"Unerwarteter Fehler beim Speichern des Pickle-Modells: {e}")
-            else:
-                file_pkl.close()
+            else:               
                 logger.info(f"Model als Pickle erfolgreich gespeichert in {pkl_path}")
+            finally:
+                if file is not None:
+                    file.close()
 
 
         if cfg.job:
@@ -103,6 +106,7 @@ class Dataset:
         Returns:
             Pikel oder Joblib binary
         """
+        file_pkl = None
         if filename.find("pkl") != -1:
             pkl_path = Path("../models") / f"{filename}"
 
@@ -118,9 +122,11 @@ class Dataset:
             except Exception as e:
                 logging.exception(f"Unerwarteter Fehler beim Laden der Pickle-Datei: {e}")
             else:
-                file_pkl.close()
                 logging.info(f"Pickel erfolgreich von {filename} geladen.")
                 return obj
+            finally:
+                if file_pkl is not None:
+                    file_pkl.close()
 
         else:
             logging.error(f"Dateiname ist kein Pikle oder Joblib, {filename}")
