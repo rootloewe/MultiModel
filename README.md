@@ -8,13 +8,19 @@ Die Config.json können die Parameter zu eingestellt werden.
 - Protokollierung der Schritte über Python Logging
 
 ## Installation
-Stelle sicher, dass Python 3 und pandas installiert sind:
-!pip install pandas
+Stelle sicher, dass Python 3 und alle Requirements installiert ist:
+pip install -r Requirements.txt
 
 
 ## Methoden
 -------
-
+def load_data(self):
+def preprocess(self):
+def save_model(self, model: str, path: str):
+def load_model(self, filename: str) -> Any:
+def get_pipelines(enabled_models: dict[str, bool]) -> dict[str, Pipeline]:
+def test_models(iris, cfg: dict) -> dict:
+def best_model(results: dict) -> dict:
 
 
 ## Lizenz
